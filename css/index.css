@@ -1,0 +1,768 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estilos header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  z-index: 2;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px grey;
+  height: 80px;
+  opacity: 0.98;
+  top: 0;
+  padding: 0 12.5%;
+  margin: 0;
+}
+
+#logo-header {
+  display: flex;
+  align-items: center;
+}
+
+#logo-header h2{
+  line-height: 20px;
+  vertical-align: middle;
+}  
+
+.logo-png {
+  height: 42px;
+}
+
+header h2, footer h2 {
+  line-height: normal;
+  margin: 0;
+}
+
+.nombre-pizzeria {
+  font-family: "league-gothic", sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 20px;
+  vertical-align: middle;
+  text-decoration: none;
+  color: #232323;
+  padding-top: 0.4px;
+  margin-left: 0.5rem;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu.open {
+  height: auto;
+}
+
+header li a {
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  line-height: normal;
+  padding: 0 1.35rem;
+  color: #232323;
+}
+
+header li:hover {
+  transform: scale(1.05, 1.05);
+}
+
+header li a:hover {
+  color: #c4122f;
+  font-weight: bold;
+}
+
+#reservas-header {
+  border: #c4122f solid 2px;
+  border-radius: 6px;
+  padding: 0.25rem 1rem;
+  margin-left: 1.35rem;
+}
+
+#toggle-header {
+  display: none;
+  cursor: pointer;
+  font-size: 2.5rem;
+}
+
+#toggle-header:active {
+  scale: 0.9;
+}
+
+#banner-reservas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../image/banner-reservas.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 500px;
+  padding: 0;
+}
+
+#banner-reservas h1 {
+  font-family: "komu-b", sans-serif;
+  font-weight: 400;
+  font-size: 5rem;
+  line-height: normal;
+  color: white;
+  animation: bounceInLeft;
+  animation-duration: 1.5s;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #f3f2ef;
+  height: 175px;
+  box-sizing: border-box;
+  padding: 0 12.5%;
+  margin: 0;
+}
+
+.nav-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: normal;
+  color: #202020;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-footer h3 {
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 500;
+  font-size: 1.17em;
+  line-height: normal;
+  color: #202020;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-contacto h3 {
+  margin: 0;
+}
+
+.nav-seguinos {
+  align-items: center;
+}
+
+.nav-seguinos h3 {
+  margin: 0;
+}
+
+#logo-footer {
+  display: flex;
+  align-items: center;
+}
+
+.nav-legales {
+  padding-bottom: 3.21rem;
+}
+
+.nav-legales h3 {
+  margin: 0;
+}
+
+footer li {
+  padding-top: 0.3rem;
+}
+
+footer span, footer li a {
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: normal;
+  padding-top: 0.3rem;
+}
+
+footer li a {
+  text-decoration: none;
+  color: #232323;
+  padding: 0;
+}
+
+footer li a:hover {
+  color: #c4122f;
+}
+
+.fa-brands, .fa-solid {
+  color: #db1d2d;
+  font-size: 17px;
+}
+
+.fa-brands:hover {
+  transform: scale(1.3, 1.3);
+}
+
+.fa-solid {
+  font-size: 14px;
+}
+
+.fa-location-dot {
+  margin-left: 0.15rem;
+}
+
+.nav-contacto span {
+  padding: 0;
+  margin-left: 0.4rem;
+}
+
+.nav-contacto .telefono{
+  margin-left: 0.60rem;
+}
+
+/* Estilos banner */
+
+.contenedor-carousel{
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.contenedor-carousel .carousel {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 300%;
+  transition: all 0.8s ease-in-out;
+  transform: translateX(0%);
+  scroll-behavior: smooth;
+}
+
+.banner-home {
+  display: flex;
+  align-items: center;
+  background-image: url(../image/banner-home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 62%;
+  width: calc( 100% / 3);
+  min-height: 500px;
+  padding: 0 calc( 12.5% / 3);
+  transition: all 0.4s ease;
+}
+
+.banner2 {
+  background-image: url(../image/banner-home2.jpg);
+}
+
+.banner3 {
+  background-image: url(../image/banner-home3.jpg);
+}
+
+.main-lookup-animation{
+  animation: bounceInLeft;
+  animation-duration: 1.5s;
+}
+
+.main-lookup h2 {
+  font-family: "komu-b", sans-serif;
+  font-weight: 400;
+  font-size: 5rem;
+  color: white;
+  margin-bottom: 0 !important;
+}
+
+.main-lookup h3 {
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 500;
+  font-size: 1.15rem;
+  color: white;
+  margin-bottom: 0 !important;
+}
+
+.main-lookup h4 {
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #ff0000;
+  background-color: #ffca0e;
+  text-align: center;
+  width: 164px;
+  border-radius: 6px;
+  padding: 0.5rem 0;
+  margin-top: 1.15rem;
+  margin-bottom: 0 !important;
+}
+
+.banner2 .main-lookup h4 {
+  color: #44720d;
+}
+
+.banner3 .main-lookup h4 {
+  color: #a23000;
+}
+
+.button-banner {
+  text-decoration: none;
+}
+
+.button-banner h4:active {
+  scale: 0.97;
+}
+
+.contenedor-carousel .fa-solid{
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.fa-angles-left{
+  position: absolute;
+  left: 5%;
+  top: 320px;
+}
+
+.fa-angles-right{
+  position: absolute;
+  right: 5%;
+  top: 320px;
+}
+
+#slider-banner{
+  position: absolute;
+  right: 45%;
+  top: 550px;
+}
+
+.contenedor-carousel button{
+  background: none;
+	border: none;
+}
+
+.fa-circle{
+  margin: 0 0.25rem;
+}
+
+.punto{
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  box-shadow: 2px 2px 8px 0.2px rgba(0, 0, 0, 0.9);
+}
+
+.contenedor-carousel .activo {
+  color: rgb(255, 0, 0);
+}
+
+/* Sección Nuestras Pizzas */
+
+#button-agregar{
+  position: absolute;
+  bottom: 150px;
+  left: 47%;
+}
+
+#hidden{
+  display: none;
+}
+
+#nuestras-pizzas{
+  text-align: center;
+  min-height: 1240px;
+  padding: 180px 12.5% 30px 12.5%;
+}
+
+#nuestras-pizzas h2{
+  position: relative;
+  font-family: "league-gothic", sans-serif;
+  font-weight: 400;
+  font-size: 3.5rem;
+  color: #232323;
+  bottom: 90px;
+}
+
+#nuestras-pizzas h2 span{
+  color: #f5101a;
+}
+
+#cards-pizzas{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 30px;
+  row-gap: 30px;
+}
+
+#cards-pizzas article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 6px;
+    background-color: rgb(243, 242, 239);
+    box-shadow: 0px 5px 14.55px 0.45px rgba(0, 0, 0, 0.2);
+    width: 332px;
+    height: 500px;
+    padding-bottom: 7px;
+    transition: 0.6s;
+}
+
+#cards-pizzas article:hover{
+  scale: 1.03;
+  box-shadow: 0px 3px 14.55px 0.45px rgba(0, 0, 0, 0.3);
+}
+
+
+#cards-pizzas .sin-etiqueta{
+  padding-top: 41px;
+}
+
+#cards-pizzas article h3{
+  font-family: "league-gothic", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  height: 25px;
+}
+
+#cards-pizzas article h4{
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border: rgb(221, 36, 47) solid 2px;
+  border-radius: 8px;
+  padding: 0 1rem;
+}
+
+#cards-pizzas article a{
+  text-decoration: none;
+}
+
+#cards-pizzas article .etiqueta-nueva{
+  align-self: flex-start;
+  margin-left: 15px;
+}
+
+#cards-pizzas article .button-pedir{
+  color: white;
+  background-color: #ec333b;
+  padding: 0 1.8rem;
+}
+
+#cards-pizzas article p{
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+#cards-pizzas article img{
+  height: 284px;
+  width: 284px;
+}
+
+/* Seccion App */
+
+#seccion-app{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #f3f2ef;
+  height: 300px;
+}
+
+#descarga-app{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#descarga-app h2{
+  font-family: "league-gothic", sans-serif;
+  font-weight: 400;
+  font-size: 3.5rem;
+  color: #232323;
+}
+
+#descarga-app h2 span{
+  font-family: "league-gothic", sans-serif;
+  font-weight: 400;
+  font-size: 3.5rem;
+  color: #f5101a;
+}
+
+#descarga-app h3{
+  font-family: "league-gothic", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #232323;
+}
+
+#descarga-app h4{
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 300;
+  font-size: 0.95rem;
+  color: #000000;
+}
+
+#button-app{
+  margin-top: 0.5rem;
+}
+
+#descargar-apple{
+  margin-right: 0.5rem;
+}
+
+#celular{
+  align-self: flex-end;
+  height: 280px;
+}
+
+
+/* Sección Nuestras Sucursales */
+
+#nuestras-sucursales{
+  min-height: 1240px;
+  padding: 180px 12.5% 30px 12.5%;
+  text-align: center;
+}
+
+#nuestras-sucursales h2{
+  font-family: "league-gothic", sans-serif;
+  font-weight: 400;
+  font-size: 3.5rem;
+  color: #232323;
+  position: relative;
+  bottom: 90px;
+}
+
+#nuestras-sucursales h2 span{
+  color: #f5101a;
+}
+
+#cards-sucursales{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 30px;
+  row-gap: 30px;
+}
+
+#cards-sucursales article{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 6px;
+    background-color: rgb(243, 242, 239);
+    background-size: 360px;
+    box-shadow: 0px 5px 14.55px 0.45px rgba(0, 0, 0, 0.2);
+    transition: 0.6s;
+    opacity: 0.85;
+    min-width: 332px;
+    min-height: 500px;
+    padding-bottom: 20px;
+}
+
+#cards-sucursales article:hover{
+  background-size: 340px;
+  box-shadow: 0px 3px 14.55px 0.45px rgba(0, 0, 0, 0.6);
+  scale: 1.03;
+  opacity: 1;
+}
+
+#card-ayacucho{
+  background-image: url(../image/sucursal_ayacucho.jpg);
+}
+
+#card-cabildo{
+  background-image: url(../image/sucursal_cabildo.jpg);
+}
+
+#card-dorrego{
+  background-image: url(../image/sucursal_dorrego.jpg);
+}
+
+#card-guemes{
+  background-image: url(../image/sucursal_guemes.jpg);
+}
+
+#card-pacheco{
+  background-image: url(../image/sucursal_pacheco.jpg);
+}
+
+#card-pueyrredon{
+  background-image: url(../image/sucursal_pueyrredon.jpg);
+}
+
+#card-sarmiento{
+  background-image: url(../image/sucursal_sarmiento.jpg);
+}
+
+#card-zeballos{
+  background-image: url(../image/sucursal_zeballos.jpg);
+}
+
+#cards-sucursales article h3{
+  font-family: "league-gothic", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 0.3rem;
+}
+
+#cards-sucursales article .button-info{
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  background-color: #ec333b;
+  border: rgb(221, 36, 47) solid 2px;
+  border-radius: 8px;
+  padding: 0 1.2rem;
+  margin-top: 0.4rem;
+}
+
+#cards-sucursales article p{
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 0.2rem;
+}
+
+#cards-sucursales article a{
+  text-decoration: none;
+}
+
+
+/* Media query */
+
+@media only screen and (max-width: 1410px){
+  #nuestras-pizzas, #nuestras-sucursales{
+    padding: 180px 3% 30px 3%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  header, footer {
+    padding: 0 3%;
+  }
+  .banner-home {
+    padding: 0 1%;
+  }
+  .flechas-banner{
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #f3f2ef;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  header nav li {
+    padding: 1rem 0;
+  }
+  #reservas-header {
+    border: #c4122f solid 0px;
+    padding: 0.25rem 3rem;
+    margin: 0;
+  }
+  header li a:hover {
+    background-color: #c4122f;
+    color: white;
+    border-radius: 6px;
+    padding: 0.25rem 3rem;
+  }
+  #toggle-header {
+    display: flex;
+  }
+  footer {
+    height: 300px;
+    padding: 2rem 3%;
+  }
+  #logo-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .banner-home {
+    background-image: url(../image/banner-home-900.jpg);
+  }
+  .banner2 {
+    background-image: url(../image/banner-home2-900.jpg);
+  }
+  .banner3 {
+    background-image: url(../image/banner-home3-900.jpg);
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .banner-home {
+    align-items: flex-start;
+    background-image: url(../image/banner-home-650.jpg);
+    padding-top: 55px;
+  }
+  .banner2 {
+    background-image: url(../image/banner-home2-650.jpg);
+  }
+  .banner3 {
+    background-image: url(../image/banner-home3-650.jpg);
+  }
+  #seccion-app{
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 500px;
+    padding-top: 30px;
+  }
+  #celular{
+    order: 2;
+    align-self: center;
+    margin-top: auto;
+  }
+  #descarga-app{
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  footer {
+    padding: 1.5rem 12.5%;
+  }
+  .nav-legales {
+    width: 100%;
+    padding-bottom: 0;
+  }
+}
