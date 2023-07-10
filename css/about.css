@@ -47,6 +47,10 @@ header {
   margin-left: 0.5rem;
 }
 
+.nombre-pizzeria:hover{
+  color: #232323;
+}
+
 header nav ul {
   display: flex;
   list-style: none;

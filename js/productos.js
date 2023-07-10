@@ -4,7 +4,8 @@ createApp({
     data(){
         return{
             productos: [],
-            url: 'https://maxisalvatore.pythonanywhere.com/productos',
+            // url: 'https://maxisalvatore.pythonanywhere.com/productos', 
+            url: 'http://127.0.0.1:5000/productos',
             cargando: true,
             error: false
         }

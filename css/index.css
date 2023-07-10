@@ -56,6 +56,10 @@ header h2, footer h2 {
   margin-left: 0.5rem;
 }
 
+.nombre-pizzeria:hover{
+  color: #232323;
+}
+
 header nav ul {
   display: flex;
   list-style: none;
@@ -377,10 +381,24 @@ footer li a:hover {
 
 /* Sección Nuestras Pizzas */
 
+#titulo-productos{
+  font-size: 45px;
+  font-family: "league-gothic", sans-serif;
+  font-weight: 400;
+  font-size: 3.5rem;
+  color: #232323;
+  text-align: center;
+  padding: 55px 3% 0 3%;
+}
+
+.fa-dollar-sign{
+  color: #111111;
+  margin-right: 2px;
+}
+
 #button-agregar{
-  position: absolute;
-  bottom: 150px;
-  left: 47%;
+  position: relative;
+  bottom: 60px;
 }
 
 #hidden{
@@ -758,11 +776,11 @@ footer li a:hover {
 }
 
 @media only screen and (max-width: 450px) {
-  #button-agregar{
+  /* #button-agregar{
     position: absolute;
     bottom: 40px;
     left: 40%;
-  }
+  } */
   footer {
     padding: 1.5rem 12.5%;
   }

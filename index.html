@@ -81,12 +81,12 @@
                 </div>
               </div>
           </section>
-          <section v-else>
+          <section v-else class="agregar-pizza">
             <a class="btn btn-danger" id="button-agregar" href="producto_nuevo.html">Agregar Pizza</a>
           <section id="cards-pizzas">
             <article v-for="p in productos">
               <h4 class="etiqueta-nueva" id="hidden">{{p.id}}</h4>
-              <h4 class="etiqueta-nueva">{{p.precio}}</h4>
+              <h4 class="etiqueta-nueva"><i class="fa-solid fa-dollar-sign"></i>{{p.precio}}</h4>
               <img :src="p.imagen" :alt="p.nombre">
               <h3>{{p.nombre}}</h3>
               <p>{{p.ingredientes}}</p>
@@ -94,7 +94,7 @@
                 <h4 class="button-pedir">PEDIR</h4>
               </a> -->
               <section>
-                <a class="btn btn-primary" :href="'producto_editar.html?id='+p.id+'&nombre='+p.nombre+'&precio='+p.precio+'&stock='+p.stock+'&imagen='+p.imagen">Editar</a>
+                <a class="btn btn-primary" :href="'producto_editar.html?id='+p.id+'&nombre='+p.nombre+'&precio='+p.precio+'&ingredientes='+p.ingredientes+'&imagen='+p.imagen">Editar</a>
                 <button type="button" class="btn btn-danger" v-on:click="eliminar(p.id)" style="margin-left: 10px;">Eliminar</button>
               </section>
             </article>
