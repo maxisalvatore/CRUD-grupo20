@@ -484,7 +484,7 @@ footer li a:hover {
 #cards-pizzas article .button-pedir{
   color: white;
   background-color: #ec333b;
-  padding: 0 1.8rem;
+  padding: 0.25rem 1.8rem;
 }
 
 #cards-pizzas article p{

@@ -42,7 +42,7 @@ function modificar(){
     fetch(url, options)
     .then(function(){
         alert('El producto fue editado exitosamente');
-        window.location.href = './index.html';
+        window.location.href = './productos.html';
     })
     .catch(err=> {
         alert('No pudo modificarse el producto');
