@@ -38,6 +38,40 @@ header h2, footer h2 {
     margin: 0;
 }
 
+.col-11{
+    padding-right: 0 !important;
+}
+
+#formulario{
+    background-color: #ffffff ;
+    height: 600px;
+    padding-top: 40px;
+}
+
+.form-container{
+    padding-right: 0 !important;
+}
+
+.form-row{
+    margin-right: 0;
+}
+
+#button-guardar{
+    margin-left: 10px; 
+    width: 120px; 
+    height: 40px; 
+    background-color: #c41515; 
+    margin-top: 0;
+}
+
+#button-modificar{
+    margin-left: 10px; 
+    width: 120px; 
+    height: 40px; 
+    background-color: #c41515; 
+    margin-top: 0;
+}
+
 .nombre-pizzeria {
     font-family: "league-gothic", sans-serif;
     font-weight: 400;
@@ -252,6 +286,15 @@ main h2 {
     text-align: center;
     padding: 55px 3% 0 3%;
 }
+
+#titulo-productos{
+    font-size: 4rem;
+    font-family: "league-gothic", sans-serif;
+    font-weight: 400;
+    color: #232323;
+    text-align: center;
+    padding: 55px 3% 0 3%;
+  }
   
 main p {
     font-family: "brandon-grotesque", sans-serif;
@@ -280,12 +323,116 @@ form .btn-primary{
     border: #db1d2d;
 }
 
-.btn-primary:hover, .btn-primary:active, .btn-primary:visited{
+form .btn-primary:hover,form .btn-primary:active,form .btn-primary:visited{
     background-color: #ff0015 !important;
     border: #db1d2d;
     scale: 1.02;
     box-shadow: 3px 0px 10px rgba(163,163,163, 0.7);
 }
+
+td{
+    vertical-align: middle;
+}
+
+.btn-outline-primary{
+    margin-right: 7px;
+}
+
+.td-button section{
+    display: flex;
+    justify-content: flex-start;
+    height: auto;
+}
+
+.td-img section{
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+.th-imagen{
+    text-align: center;
+}
+
+thead .tr-color th{
+    /* background-color: #ff8282; */
+    background-color: #c41515;
+    color: white;
+}
+
+.table-responsive{
+    border: 1px solid #db1d2d !important;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.table{
+    margin-bottom: 0 !important;
+}
+
+#app{
+    padding-bottom: 200px;
+}
+
+.fa-dollar-sign{
+    color: #111111;
+    margin-right: 2px;
+}
+
+#agregar-producto{
+    background-color:  #c41515;
+    border: #c41515;
+    padding-right: 31px;
+    padding-left: 31px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+}
+
+#agregar-producto:hover{
+    background-color:  #e90a0a;
+    border: #e90a0a;
+}
+
+.fa-trash, .fa-pen-to-square{
+    margin-right: 5px;
+}
+
+.fa-pen-to-square{
+    color: rgb(52, 52, 255);
+}
+
+.fa-trash:hover{
+    color: white;
+}
+
+.btn-outline-danger:hover{
+    color: white;
+}
+
+label{
+    vertical-align: middle;
+}
+
+#container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-overlay{
+    background: hsla(349, 94%, 58%, 0.34);
+}
+
+.is-invalid{
+    border-color: #ced4da !important;
+    background-image: none !important;
+}
+
+.nombre-pizzeria:hover{
+    color: #232323;
+}  
 
 .input{
     position: relative;
@@ -303,7 +450,7 @@ form .btn-primary{
     opacity: 0;
     position: absolute;
     right: -30px;
-    bottom: 7px;
+    top: 12px;
     font-size: 1.4rem;
 }
 
@@ -320,7 +467,9 @@ form .btn-primary{
 }
 
 .validacion-error-activo{
+    position: absolute;
     display: block;
+    top: 320px;
 }
 
 .mensaje-error {
@@ -353,6 +502,7 @@ form .btn-primary{
 .mensaje-exito-activo {
 	display: block;
 }
+
 
 .form-container-correcto .validacion-estado {
 	color: #1ed12d;
@@ -437,6 +587,9 @@ form .btn-primary{
         justify-content: center;
         align-items: center;
         width: 100%;
+    }
+    .td-button section{
+        flex-direction: column;
     }
 }
 

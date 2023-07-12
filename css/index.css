@@ -776,11 +776,6 @@ footer li a:hover {
 }
 
 @media only screen and (max-width: 450px) {
-  /* #button-agregar{
-    position: absolute;
-    bottom: 40px;
-    left: 40%;
-  } */
   footer {
     padding: 1.5rem 12.5%;
   }
